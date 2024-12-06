@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace AppShoping.DataProviders;
 
-namespace AppShoping.DataProviders
+public class PurchasedProductsProvider 
 {
-    public interface IPurchasedProductsProvider
-    {
 
 
-    }
 }

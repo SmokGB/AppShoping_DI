@@ -3,5 +3,7 @@
 public interface IUserCommunication
 {
     void DisplayMenu();
-  
+    void RunChoose();
+
+
 }

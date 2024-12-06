@@ -1,10 +1,19 @@
 ﻿using AppShoping;
+using AppShoping.Data;
+using AppShoping.Entities;
 using AppShoping.Menu;
+using AppShoping.Repositories;
+using AppShoping.Repositories.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 var services = new ServiceCollection();
 services.AddSingleton<IApp,App>();
 services.AddSingleton<IUserCommunication,UserCommunication>();
+services.AddSingleton<IRepository<Food>,SqlRepository<Food>>();
+services.AddSingleton<IRepository<BioFood>, SqlRepository<BioFood>>();
+//services.AddDbContext(ShopAppDbContext,);
+
+
 
 var serviceProvider = services.BuildServiceProvider();
 var app = serviceProvider.GetService<IApp>()!;
